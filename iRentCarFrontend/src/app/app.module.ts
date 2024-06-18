@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -9,7 +9,6 @@ import { DarkModeToggleComponent } from './elements/dark-mode-toggle/dark-mode-t
 import { ScreenShotComponent } from './objects/screen-shot/screen-shot.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProfilBarComponent } from './components/profil-bar/profil-bar.component';
-import { GoogleChartsModule } from "angular-google-charts";
 
 import {ReactiveFormsModule} from "@angular/forms";
 
@@ -28,10 +27,11 @@ import {ReactiveFormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GoogleChartsModule,
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
 })
 export class AppModule { }
